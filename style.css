@@ -1,0 +1,8 @@
+.reduceCellHeight{
+    height:60px; 
+    overflow:hidden;
+  }
+  
+  .cellResize-btn {
+    float: right
+  }
