@@ -1,6 +1,6 @@
 .reduceCellHeight{
-    height:60px; 
-    overflow:hidden;
+    height: 4em; 
+    overflow: hidden;
   }
   
   .cellResize-btn {
