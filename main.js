@@ -4,28 +4,31 @@ $(document).ready(() => {
   $('.table-cell-resizable td').wrapInner('<div></div>');
 
   // ON-LOAD: APPLY BUTTON ONLY TO CELLS ABOVE SPECIFIED HEIGHT
-  $('#myTable tr').each(function getDiv() {
-    $(this)
-      .find('div')
-      .each(function addBtnTgglClass() {
-        if ($(this).find('br').length > 3) {
-          $(this).prepend('<button class="cellResize-btn">+</button>');
-          $(this).toggleClass('reduceCellHeight');
-        }
-      });
+  $('#myTable div').each(function addBtnTgglClass() {
+    if ($(this).find('br').length > 3) {
+      $(this).prepend('<button class="cellResize-btn">+</button>');
+      $(this).toggleClass('reduceCellHeight');
+    }
   });
 
   // BUTTON CLICK HANDLER
   $('.cellResize-btn')
     .unbind()
     .click(function handlePlusMinusBtn() {
-      $(this)
-        .parent()
+      const $rowInQuestion = $(this).closest('tr');
+
+      $rowInQuestion
+        .find('div')
         .toggleClass('reduceCellHeight');
-      if ($(this).html() === '+') {
-        $(this).html('-');
-      } else {
-        $(this).html('+');
-      }
+
+      $rowInQuestion
+        .find('button')
+        .each(function switchBtnSign() {
+          if ($(this).html() === '+') {
+            $(this).html('-');
+          } else {
+            $(this).html('+');
+          }
+        });
     });
 });
