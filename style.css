@@ -1,3 +1,7 @@
+.table-cell-resizable{
+  table-layout: fixed;
+}
+
 .reduceCellHeight{
     height: 4em; 
     overflow: hidden;

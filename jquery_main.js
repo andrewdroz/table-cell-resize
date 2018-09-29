@@ -1,7 +1,7 @@
 // WRAP <td> INSIDE <div>
 $('.table-cell-resizable td').wrapInner('<div></div>');
 
-// ON-LOAD: APPLY BUTTON ONLY TO CELLS ABOVE SPECIFIED HEIGHT
+// APPLY BUTTON ONLY TO CELLS ABOVE SPECIFIED NUM OF LINES
 $('.table-cell-resizable div').each(function addBtnTgglClass() {
   if ($(this).find('br').length > 3) {
     $(this).prepend('<button class="cellResize-btn">+</button>');
