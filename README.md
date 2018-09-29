@@ -10,7 +10,7 @@ Allows a basic html table with cells that can contain multiple lines to be resiz
 ```
 
 ## Two different main.js files - one using jQuery, the other purely javascript
-#### Using the pure javascript file
+#### Using the javascript-only file
 ```
 <!--<script
   src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
